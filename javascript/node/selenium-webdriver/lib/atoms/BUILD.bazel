@@ -1,6 +1,6 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary")
+load("@aspect_rules_js//js:defs.bzl", "js_binary")
 
-nodejs_binary(
+js_binary(
     name = "make_atoms_module",
     data = ["make-atoms-module.js"],
     entry_point = ":make-atoms-module.js",

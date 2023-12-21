@@ -1,4 +1,4 @@
-load("@build_bazel_rules_nodejs//:index.bzl", "nodejs_binary", "pkg_npm")
+load("@aspect_rules_js//js:defs.bzl", "js_binary", "pkg_npm")
 load("@npm//@bazel/jasmine:index.bzl", "jasmine_node_test")
 load("//common:defs.bzl", "copy_file")
 
