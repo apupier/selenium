@@ -3,6 +3,7 @@ name: CI - JavaScript
 on:
   workflow_call:
   workflow_dispatch:
+  pull_request:
 
 jobs:
   build:
@@ -42,7 +43,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 16
+          node-version: 18.16.0
       - name: NPM install
         run: cd javascript/grid-ui && npm install
       - name: Run unit tests
